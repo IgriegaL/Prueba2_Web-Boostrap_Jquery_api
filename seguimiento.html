@@ -53,15 +53,27 @@
         <div class="container">
             <div class="row d-flex center justify-content-center">
                 <div class="col-12 col-lg-6 d-flex justify-content-center align-items-lg-center">
+                  
                   <div>
                     <h1 class="w-100" style="text-align: center; margin-bottom: 10px;">
                       Rastrea tus encargos
-                  </h1>
-                  <form class="d-flex flex-column" style="margin-bottom: 20px;">
-                    <input class="form-control me-2" type="search" placeholder="Código de rastreo" aria-label="Search" id="codigoRastreo">
-                    <button class="btn btn-dark" type="submit" id="rastrear">Buscar</button>
-                  </form>
+                    </h1>
+                    <form class="d-flex flex-column" style="margin-bottom: 20px;">
+                      <input class="form-control me-2" type="search" placeholder="Código de rastreo" aria-label="Search" id="codigoRastreo">
+                      <button class="btn btn-dark" type="submit" id="rastrear">Buscar pedido</button>
+                    </form>
+
+                    <h1 class="w-100" style="text-align: center; margin-bottom: 10px;">
+                      Revisa tu historial
+                    </h1>
+                    <form class="d-flex flex-column" style="margin-bottom: 20px;">
+                      <button class="btn btn-outline-dark" type="submit" id="historial">Ver historial de compras</button>
+                    </form>
+                    <form class="d-flex flex-column" style="margin-bottom: 20px;">
+                      <button class="btn btn-outline-dark" type="submit" id="ocultar">Ocultar historial de compras</button>
+                    </form>
                   </div>
+                
                 </div>
 
                 <div class="col-12 col-lg-6">
@@ -79,45 +91,19 @@
                 </h1></div>
 
               <div class="row" id="prodSeguimiento"> 
+                <!-- Aquí texto html reemplazado para mostrar seguimiento -->
+              </div>
+            </section>
 
-                <!-- <div class="col-12 col-md-6 col-lg-10 justify-content-center d-flex mt-3 mx-auto">
-                  <div class="d-flex flex-column flex-lg-row align-items-center p-3 shadow-lg rounded-3">
-                    <div style="background-image: url(https://images.lider.cl/wmtcl?source=url[file:/productos/1126576a.jpg]&sink);
-                    width: 100px;
-                    height: 100px;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 100px;
-                    ">
-                    </div>
-                    <div class="ms-3">
-                      <h4>Macetero cerámica con plato</h4>
-                    </div>
-                    <div class="ms-3 mx-2 d-flex align-items-center" style="border: #2A9D8F solid 1px; border-radius: 15px;">
-                      <h5 class="p-0 m-0 px-3 py-2 fs-5" style="color:#2A9D8F;">Entregado</h5>
-                    </div>
-                  </div>
-                </div> -->
+            <section class="container mb-4" id="vistaHistorial">
 
-                <!-- <div class="col-12 col-md-6 col-lg-10 justify-content-center d-flex mt-3 mx-auto">
-                  <div class="d-flex flex-column flex-lg-row align-items-center p-3 shadow-lg rounded-3">
-                    <div style="background-image: url(https://casaideas.cl/media/catalog/product/3/2/3222387000016_1_3.jpg?optimize=low&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:);
-                    width: 100px;
-                    height: 100px;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 100px;
-                    ">
-                    </div>
-                    <div class="ms-3">
-                      <h4>Maceta Fibra-Bambú 18x40 cm</h4>
-                    </div>
-                    <div class="ms-3 mx-2 d-flex align-items-center" style="border: #2A9D8F solid 1px; border-radius: 15px;">
-                      <h5 class="p-0 m-0 px-3 py-2 fs-5" style="color:#2A9D8F;">En bodega</h5>
-                    </div>
-                  </div>
-                </div> -->
-                
+              <div class="row">
+                <h1 class="w-100" style="text-align: center; margin-bottom: 10px;">
+                  Historial de compras
+                </h1></div>
+
+              <div class="row" id="prodHistorial">                
+                <!-- Aquí texto html reemplazado para mostrar historial-->
               </div>
             </section>
 
