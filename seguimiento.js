@@ -24,7 +24,7 @@ $(document).ready(function(){
       precio: "$8.790",
       fechaCompra: "20/05/22",
       fechaDespacho: "Pendiente entrega",
-	    estado: "En bodega"},
+	    estado: "En camino"},
     { codPedido: 00002,
 	    codProducto: 10004,
 	    url: "https://www.vivamos.cl/wp-content/uploads/2022/03/photoroom_002_20220330_011345.png",
@@ -67,24 +67,37 @@ $(document).ready(function(){
     productos.forEach((element) => {
       if(codigo == element.codPedido){
         contador += 1;
-        var textoSeguimiento = `<div class="col-12 col-md-6 col-lg-10 justify-content-center d-flex mt-3 mx-auto">
-        <div class="d-flex flex-column flex-lg-row align-items-center p-3 shadow-lg rounded-3">
-          <div style="background-image: url(${element.url});
-          width: 100px;
-          height: 100px;
-          background-size: cover;
-          background-position: center;
-          border-radius: 100px;
-          ">
+        var color = "";
+
+        if(element.estado == "Entregado"){
+          var color = "green";
+        }
+        else if(element.estado == "En bodega"){
+          var color = "orange";
+        }
+        else{
+          var color = "blue";
+        };
+
+        var textoSeguimiento =
+        `<div class="col-12 col-md-6 col-lg-10 justify-content-center d-flex mt-3 mx-auto">
+          <div class="d-flex flex-column flex-lg-row align-items-center p-3 shadow-lg rounded-3">
+            <div style="background-image: url(${element.url});
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 100px;
+            ">
+            </div>
+            <div class="ms-3">
+              <h4>${element.descripcion}</h4>
+            </div>
+            <div class="ms-3 mx-2 d-flex align-items-center" style="border: ${color} solid 1px; border-radius: 15px;">
+              <h5 class="p-0 m-0 px-3 py-2 fs-5" style="color: ${color};">${element.estado}</h5>
+            </div>
           </div>
-          <div class="ms-3">
-            <h4>${element.descripcion}</h4>
-          </div>
-          <div class="ms-3 mx-2 d-flex align-items-center" style="border: #2A9D8F solid 1px; border-radius: 15px;">
-            <h5 class="p-0 m-0 px-3 py-2 fs-5" style="color:#2A9D8F;">${element.estado}</h5>
-          </div>
-        </div>
-      </div>`;
+        </div>`;
   
         texto += textoSeguimiento;
       }
